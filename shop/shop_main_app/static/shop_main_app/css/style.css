@@ -93,13 +93,9 @@ a.simpleCart_empty {
   float: left;
 }
 .banner {
-	background:url("../images/banner_img.jpg") no-repeat 0px 0px;
-	background-size:cover;
-	-moz-background-size:cover;
-	-o-background-size:cover;
-	-ms-background-size:cover;
-	-webkit-background-size:cover;
-	min-height:705px;
+	background:url("../images/pizza-burger.jpg") no-repeat 0px 0px;
+
+	min-height:500px;
 }
 .logo h1 a {
     color: #000;
