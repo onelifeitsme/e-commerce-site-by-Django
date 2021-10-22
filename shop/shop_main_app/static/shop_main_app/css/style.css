@@ -96,10 +96,18 @@ a.simpleCart_empty {
   margin-left: 8px;
   float: left;
 }
-.banner {
-	background:url("../images/pizza-burger.jpg") no-repeat 0px 0px;
+.bannerto {
+    display: flex;
+    justify-content: center;
+}
 
-	min-height:500px;
+.bannertopik {
+	background:url("../images/picca.jpg");
+
+
+    }
+.container-top {
+    display: flex;
 }
 .logo h1 a {
     color: #000;
@@ -124,7 +132,7 @@ a.simpleCart_empty {
 .banner-top {
 	padding-top: 25px;
     background-color: #f8f8f8;
-    padding-left: 25%;
+    padding-left: 10%;
 
 }
 .inner-head {
@@ -226,6 +234,7 @@ ul.multi-column-dropdown h6 {
 .banner-bottom-right{
 	float:right;
 	width: 25%;
+    padding-left: 20%;
 }
 .banner-bottom-left h2 {
     font-size: 90px;
@@ -260,9 +269,8 @@ ul.multi-column-dropdown h6 {
   list-style: none;
 }
 .callbacks_container {
-  position: relative;
-  float: left;
   width: 100%;
+
 }
 .callbacks {
   position: relative;
@@ -3068,7 +3076,7 @@ p.right {
 }
 
 .menutop {
-    font-size: 25px;
+    font-size: 35px;
 }
 
 .headertitleh1 {
@@ -3085,10 +3093,7 @@ p.right {
     margin-top: 1%;
 }
 .basketshadow {
-
-    border: 3px solid black;
-    background-color: #fbd11e;
-    border-radius: 20%;
+    display: flex;
 
 
 }
@@ -3098,5 +3103,37 @@ p.right {
 
 .baskettitleh1 {
     color: black;
+    font-weight: bold;
+}
+
+.icn-cart:before {
+    content:url("../images/basketiconka.png")
+}
+
+.cart-count:not(.animate) {
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+.cart-count {
+    height: 35px;
+    letter-spacing: 1.1px;
+    border-radius: 18px;
+    background-color: #cccccc;
+    display: inline-block;
+    left: 15px;
+    top: -15px;
+    color: #3C3038;
+    text-align: center;
+    font-size: 20px;
+    line-height: 16px;
+    min-width: 18px;
+    padding: 10px;
+}
+
+.korzina {
+    font-size: 30px;
+    color: snow;
     font-weight: bold;
 }

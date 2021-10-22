@@ -29,18 +29,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="header-top-strip">
 			<div class="headerlogobloc"> <img src="{% static 'shop_main_app/images/pizza-burgelogo1.jpg' %}"></div>
 			<div class="hedertitile"><h1 class="headertitleh1">ТВОЙ ЛЮБИМЫЙ ФАСТ-ФУД</h1></div>
-			<div class="basketblock">
-				<div class="basketshadow">
-				<div class="baskettitile"><h1 class="baskettitleh1">Корзина</h1></div>
-				<div class="basketimgpluscount">
-				<div class="basketimage"><img src="{% static 'shop_main_app/images/basketicon1.png' %}"></div>
-				<div class="baskettitile"><h1 class="baskettitleh1">0 BYN</h1></div>
-					</div>
-			</div>
-			</div>
+
+                <div class="basketshadow">
+				<a class="cart" href="/shop/order">
+                    <i class="icn icn-cart"></i>
+					<span class="count cart-count">0</span>
+					<span class="text visible-lg-inline visible-md-inline"><h1 class="korzina">Корзина</h1></span>
+                </a>
+				</div>
+
 			</div>
 		</div>
-	</div>
 	<!-- header-section-ends -->
 	<div class="banner-top">
 		<div class="container">
@@ -59,52 +58,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!--/.navbar-->
 		</div>
 		</div>
-	<div class="banner">
-		<div class="container">
-<div class="banner-bottom">
-	<div class="banner-bottom-right">
-		<div  class="callbacks_container">
-					<ul class="rslides" id="slider4">
-					<li>
-								<div class="banner-info">
-									<h3>Бесплатная доставка</h3>
-								</div>
-							</li>
-							<li>
-								<div class="banner-info">
-								   <h3>24/7</h3>
-								</div>
-							</li>
-						</ul>
-					</div>
-					<!--banner-->
-	  			<script src="{% static 'shop_main_app/js/responsiveslides.min.js' %}"></script>
-			 <script>
-			    // You can also use "$(window).load(function() {"
-			    $(function () {
-			      // Slideshow 4
-			      $("#slider4").responsiveSlides({
-			        auto: true,
-			        pager:true,
-			        nav:false,
-			        speed: 900,
-			        namespace: "callbacks",
-			        before: function () {
-			          $('.events').append("<li>before event fired.</li>");
-			        },
-			        after: function () {
-			          $('.events').append("<li>after event fired.</li>");
-			        }
-			      });
 
-			    });
-			  </script>
-	</div>
-	<div class="clearfix"> </div>
-</div>
-	</div>
-		</div>
-		<!-- content-section-starts-here -->
 		<div class="container">
 			<div class="main-content">
 				<div class="products-grid">
@@ -220,17 +174,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="clearfix"></div>
 					</div>
 					<div class="col-md-4 online-order">
-						<p>Order online</p>
-						<h3>Tel:999 4567 8902</h3>
+						<h1>+375(29)111-11-11</h1>
 					</div>
 					<div class="clearfix"></div>
 				</div>
 		<div class="footer">
 		<div class="container">
-		  <div class="cards text-center">
-				<img src="{% static 'shop_main_app/images/cards.jpg' %}" alt="" />
-		  </div>
-		  <div class="copyright text-center">
+		  		  <div class="copyright text-center">
 				<p>Сайт сделал на фреймворке Django <a href="http://w3layouts.com">  Автор: Карпович Артур</a></p>
 		  </div>
 		</div>
