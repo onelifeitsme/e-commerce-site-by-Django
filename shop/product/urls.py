@@ -1,10 +1,10 @@
 from django.contrib.auth import admin
 from django.urls import path, include
 
-from shop_main_app.views import index
+from product.views import product
 
 urlpatterns = [
-    path('product', index)
+    path('single.html', product)
 ]
 
 

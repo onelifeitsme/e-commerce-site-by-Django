@@ -11,7 +11,7 @@
 <!-- Custom Theme files -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Eshop Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+<meta name="keywords" content="Eshop Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!--webfont-->
@@ -60,7 +60,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!--/.navbar-->
 		</div>
 		</div>
-
+        {% block maincontent % }
 		<div class="container">
 			<div class="main-content">
 				<div class="products-grid">
@@ -82,6 +82,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 
 		</div>
+        {% endblock %}
 		<div class="other-products">
 		<div class="container">
 			<h3 class="like text-center">Со скидкой на этой неделе:</h3>
@@ -101,25 +102,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							visibleItems: 4,
 							animationSpeed: 1000,
 							autoPlay: true,
-							autoPlaySpeed: 3000,    		
+							autoPlaySpeed: 3000,
 							pauseOnHover: true,
 							enableResponsiveBreakpoints: true,
-					    	responsiveBreakpoints: { 
-					    		portrait: { 
+					    	responsiveBreakpoints: {
+					    		portrait: {
 					    			changePoint:480,
 					    			visibleItems: 1
-					    		}, 
-					    		landscape: { 
+					    		},
+					    		landscape: {
 					    			changePoint:640,
 					    			visibleItems: 2
 					    		},
-					    		tablet: { 
+					    		tablet: {
 					    			changePoint:768,
 					    			visibleItems: 3
 					    		}
 					    	}
 					    });
-					    
+
 					});
 				   </script>
 				   <script type="text/javascript" src="{% static 'shop_main_app/js/jquery.flexisel.js' %}"></script>
