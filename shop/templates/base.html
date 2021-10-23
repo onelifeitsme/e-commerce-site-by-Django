@@ -25,7 +25,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 <body>
 	<!-- header-section-starts -->
-	{% block header %}
+
 	<div class="header">
 		<div class="header-top-strip">
 			<div class="headerlogobloc"> <img src="{% static 'shop_main_app/images/pizza-burgelogo1.jpg' %}"></div>
@@ -41,7 +41,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 			</div>
 		</div>
-	{% endblock %}
+
 	<!-- header-section-ends -->
 	<div class="banner-top">
 		<div class="container">
@@ -60,28 +60,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!--/.navbar-->
 		</div>
 		</div>
-        {% block maincontent % }
-		<div class="container">
-			<div class="main-content">
-				<div class="products-grid">
-				<header>
-					<h3 class="head text-center">Самые популярные</h3>
-				</header>
-					{% for product in products %}
-					<div class="col-md-4 product simpleCart_shelfItem text-center">
-						<a href=""><img src="{{ product.image.url }}" alt="" /></a>
-						<div class="mask">
-							<a href="single.html">Quick View</a>
-						</div>
-						<a class="product_name" href="single.html">{{ product.name }}</a>
-						<p><a class="item_add" href="#"><i></i> <span class="item_price">{{ product.price }}</span></a></p>
-					</div>
-					{% endfor %}
-					<div class="clearfix"></div>
-				</div>
-			</div>
-
-		</div>
+        {% block maincontent %}
+        Главный контент страницы
         {% endblock %}
 		<div class="other-products">
 		<div class="container">

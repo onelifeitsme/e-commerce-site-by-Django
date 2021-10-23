@@ -141,6 +141,7 @@ a.simpleCart_empty {
 .navbar-default {
     background-color: transparent;
     border-color: transparent;
+    margin-bottom: 5%;
 }
 .navbar-default .navbar-nav > li > a {
     color: #000;
