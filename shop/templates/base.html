@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Eshop a Flat E-Commerce Bootstrap Responsive Website Template | Home :: w3layouts</title>
+<title>Тайтл</title>
 <link type='text/css' href="{% static 'shop_main_app/css/bootstrap.css' %}" rel='stylesheet'/>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="{% static 'shop_main_app/js/jquery.min.js' %}"></script>
@@ -28,11 +28,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 	<div class="header">
 		<div class="header-top-strip">
-			<div class="headerlogobloc"> <img src="{% static 'shop_main_app/images/pizza-burgelogo1.jpg' %}"></div>
+			<div class="headerlogobloc"><a href="{% url 'index' %}"><img src="{% static 'shop_main_app/images/pizza-burgelogo1.jpg' %}"></a></div>
 			<div class="hedertitile"><h1 class="headertitleh1">ТВОЙ ЛЮБИМЫЙ ФАСТ-ФУД</h1></div>
 
                 <div class="basketshadow">
-				<a class="cart" href="/shop/order">
+				<a class="cart" href="/basket">
                     <i class="icn icn-cart"></i>
 					<span class="count cart-count">0</span>
 					<span class="text visible-lg-inline visible-md-inline"><h1 class="korzina">Корзина</h1></span>
@@ -63,6 +63,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         {% block maincontent %}
         Главный контент страницы
         {% endblock %}
+		{% block promotion %}
 		<div class="other-products">
 		<div class="container">
 			<h3 class="like text-center">Со скидкой на этой неделе:</h3>
@@ -106,6 +107,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				   <script type="text/javascript" src="{% static 'shop_main_app/js/jquery.flexisel.js' %}"></script>
 				   </div>
 				   </div>
+		{% endblock %}
 		<!-- content-section-ends-here -->
 		<div class="news-letter">
 			<div class="container">
@@ -125,18 +127,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="col-md-4 follow-us">
 						<h3>Мы в соцсетях : <a class="twitter" href="#"></a><a class="facebook" href="#"></a></h3>
 					</div>
-					<div class="col-md-4 shipping-grid">
-						<div class="shipping">
-							<img src="{% static 'shop_main_app/images/shipping.png' %}" alt="" />
-						</div>
-						<div class="shipping-text">
-							<h3>Бесплатная доставка при заказе от 15 BYN</h3>
-						</div>
-						<div class="clearfix"></div>
-					</div>
-					<div class="col-md-4 online-order">
-						<h1>+375(29)111-11-11</h1>
-					</div>
+
 					<div class="clearfix"></div>
 				</div>
 		<div class="footer">

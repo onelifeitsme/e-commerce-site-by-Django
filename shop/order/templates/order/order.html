@@ -1,10 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% block maincontent %}
+{% load static %}
+<link type="text/css" href="{% static 'order/css/order.css' %}" rel="stylesheet">
+<div class="contentik">
+<div class="formblock">
+<form class="orderform" action="{% url 'order' %}" method="post">
+    {% csrf_token %}
+    {{ forma.as_p }}
+    <button type="submit">Подтвердить заказ</button>
+</form>
+</div>
+</div>
 
-</body>
-</html>
+{% endblock %}
+{% block promotion %}
+{% endblock %}
+

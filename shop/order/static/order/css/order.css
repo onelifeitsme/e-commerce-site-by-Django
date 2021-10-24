@@ -1,0 +1,22 @@
+.contentik {
+    display: flex;
+}
+.formblock {
+    padding-left: 10%;
+}
+
+.orderform {
+    font-size: 30px;
+}
+
+input {
+  font-size: 16px;
+  padding: 10px;
+  display: block;
+  width: 300px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+input:focus {
+  outline: none;
+}

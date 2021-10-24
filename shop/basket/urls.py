@@ -1,10 +1,10 @@
 from django.contrib.auth import admin
 from django.urls import path, include
 
-from .views import order
+from basket.views import basket
 
 urlpatterns = [
-    path('order', order, name='order')
+    path('basket', basket, name='basket')
 ]
 
 

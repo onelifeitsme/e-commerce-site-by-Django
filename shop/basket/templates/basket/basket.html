@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block maincontent %}
+{% load static %}
+<link type="text/css" href="{% static 'basket/css/basket.css' %}" rel="stylesheet">
+<div class="itemsinbasketh1">
+    <h1>ТОВАРЫ В КОРЗИНЕ</h1>
+</div>
+<div class="ordercontent">
+<div class="basketshadowww">
+<div class="baskerblockkk">
+{% for five in fivetestproduct %}
+    <div class="iteminbasket">
+        <div class="iteminbasketname">
+            <h2 class="itembasketnameh2">{{ five.name }}</h2>
+        </div>
+        <div class="iteminbasketimage">
+            <img class="imgimgimg" src="{{ five.image.url }}" alt="">
+        </div>
+        <div class="iteminbasketprice">
+            <h2 class="itembasketpriceh2">{{ five.price }} BYN</h2>
+        </div>
+        <div class="countchage">
+            <input type="button" value="+" onClick="change('amount',0,10, 1);"/>
+            <input id="amount" type="text" value="1"/>
+            <input type="button" value="-" onClick="change('amount',0,10,-1);"/>
+            <script>
+function change(objName, min, max, step) {
+var obj = document.getElementsById(objName);
+var tmp = +obj.value + step;
+if (tmp<min) tmp=min;
+if (tmp>max) tmp=max;
+obj.value = tmp;
+}
+</script>
+        </div>
+
+    </div>
+{% endfor %}
+    <div class="orderbutonnn">
+        <a href="{% url 'order' %}" class="button10">Оформить заказ</a>
+    </div>
+</div>
+</div>
+</div>
+{% endblock %}
+{% block promotion %}
+{% endblock %}

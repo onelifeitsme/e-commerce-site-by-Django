@@ -464,6 +464,8 @@ ul.multi-column-dropdown h6 {
 	padding: 20px 0;
 	text-align:center;
 	margin: 40px 0 30px;
+    display: flex;
+    justify-content: center;
 }
 .shipping-grid {
 	border-left: 1px solid #C8C8C8;
@@ -2269,6 +2271,7 @@ p.right {
 	.online-strip {
 		padding: 15px 0;
 		margin: 35px 0 20px;
+        display: flex;
 	}
 	h3.head.text-center {
 		font-size: 30px;
@@ -2790,6 +2793,7 @@ p.right {
 	}
 	.online-strip h3 {
 		font-size: 1.2em;
+        display: flex;
 	}
 	.shipping {
 		margin-left: 38%;
@@ -2798,6 +2802,7 @@ p.right {
 	}
 	.follow-us,  .online-order {
 		margin-top: 15px;
+
 	}	
 	.products {
 		width: 100%;
@@ -3137,4 +3142,8 @@ p.right {
     font-size: 30px;
     color: snow;
     font-weight: bold;
+}
+
+a.cart {
+    text-decoration: none;
 }
