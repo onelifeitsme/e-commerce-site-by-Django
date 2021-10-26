@@ -4,7 +4,7 @@ from django.urls import path, include
 from product.views import product
 
 urlpatterns = [
-    path('single.html', product)
+    path('product/<slug:product_slug>/', product, name='product')
 ]
 
 

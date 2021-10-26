@@ -10,9 +10,9 @@
 			<div class="col-md-4 product simpleCart_shelfItem text-center">
 				<a href=""><img src="{{ product.image.url }}" alt="" /></a>
 				<div class="mask">
-					<a href="single.html">Quick View</a>
+					<a href="{% url 'product' product.pk %}">Quick View</a>
 				</div>
-				<a class="product_name" href="single.html">{{ product.name }}</a>
+				<a class="product_name" href="{{ product.get_absolute_url }}">{{ product.name }}</a>
 				<p><a class="item_add" href="#"><i></i> <span class="item_price">{{ product.price }}</span></a></p>
 			</div>
 			{% endfor %}
