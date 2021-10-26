@@ -8,4 +8,3 @@ class Orderform(forms.Form):
     flat = forms.CharField(max_length=255, label='Квартира')
     orderdescription = forms.CharField(max_length=1500, label='Подробности заказа')
     comment = forms.CharField(max_length=255, label='Комментарий к заказу')
-

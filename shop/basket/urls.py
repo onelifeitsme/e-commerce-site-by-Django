@@ -6,6 +6,3 @@ from basket.views import basket
 urlpatterns = [
     path('basket', basket, name='basket')
 ]
-
-
-
