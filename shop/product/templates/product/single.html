@@ -13,7 +13,7 @@
   </div>
     <div class="itemwshow">
     <div class="itemimg">
-        <img class="im" src="{{ product.image.url }}" alt="">
+        <img class="im" src="{{ item.image.url }}" alt="">
     </div>
     <div class="itemdesc">
         <div class="itemtunring">
@@ -25,7 +25,7 @@
             <path d="M-1.48029737e-15,0.56157424 L-1.48029737e-15,16.1929159 L9.708,8.33860465 L-2.66453526e-15,0.56157424 L-1.48029737e-15,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"></path>
         </g>
     </svg>
-            <div class="itemname"><h1>Имя товара</h1></div>
+            <div class="itemname"><h1>{{ item.name }}</h1></div>
     <svg width="18px" height="17px" viewBox="-1 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <g>
             <polygon class="arrow-6-pl" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
@@ -57,7 +57,7 @@
         </ul>
         <div class="itemparamscoun">
             <div class="itemparamscount weight">400</div>
-            <div class="itemparamscount cost">6 BYN</div>
+            <div class="itemparamscount cost">{{ item.price }} BYN</div>
         </div>
 
         </div>
