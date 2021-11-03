@@ -7,9 +7,9 @@ from django.views.generic import DetailView
 # Create your views here.
 def product(request, product_slug):
     product = get_object_or_404(Product, slug=product_slug)
-    cats = Category.objects.all()
+    # cats = Category.objects.all()
     promotionals = Product.objects.filter(promotional=True)
-    return render(request, 'product/single.html', {'cats': cats, 'promotionals': promotionals, 'product': product})
+    return render(request, 'product/single.html', {'promotionals': promotionals, 'product': product})
 
 
 class Productview(DetailView):

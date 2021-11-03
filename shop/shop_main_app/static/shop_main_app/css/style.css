@@ -464,6 +464,8 @@ ul.multi-column-dropdown h6 {
 	padding: 20px 0;
 	text-align:center;
 	margin: 40px 0 30px;
+    display: flex;
+    justify-content: center;
 }
 .shipping-grid {
 	border-left: 1px solid #C8C8C8;

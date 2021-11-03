@@ -1,8 +1,8 @@
 from django.contrib.auth import admin
 from django.urls import path, include
 
-from basket.views import basket
+from cart.views import cart
 
 urlpatterns = [
-    path('basket', basket, name='basket')
+    path('cart', cart, name='cart')
 ]

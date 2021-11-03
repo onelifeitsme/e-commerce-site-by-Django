@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from product.models import Product
 
 # Create your views here.
-def basket(request):
+def cart(request):
     products = Product.objects.all()
     fivetestproduct = products[:7]
-    return render(request, 'basket/basket.html', {'fivetestproduct': fivetestproduct})
+    return render(request, 'cart/cart.html', {'fivetestproduct': fivetestproduct})
