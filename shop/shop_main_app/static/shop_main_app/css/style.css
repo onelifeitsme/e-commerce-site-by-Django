@@ -3140,3 +3140,8 @@ p.right {
     color: snow;
     font-weight: bold;
 }
+
+.itemphotoimg {
+    width: 290px;
+    height: 240px;
+}

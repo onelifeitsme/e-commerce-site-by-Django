@@ -8,7 +8,7 @@
 		</header>
 			{% for product in products %}
 			<div class="col-md-4 product simpleCart_shelfItem text-center">
-				<a href=""><img src="{{ product.image.url }}" alt="" /></a>
+				<a href=""><img class="itemphotoimg" src="{{ product.image.url }}" alt="" /></a>
 				<div class="mask">
 					<a href="{{ product.get_absolute_url }}">Quick View</a>
 				</div>
