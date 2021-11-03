@@ -176,7 +176,7 @@ a.simpleCart_empty {
 .navbar {
     position: relative;
     min-height: 50px;
-    margin-bottom: 0px;
+    margin-bottom: 15px;
 }
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
     color: #555;
@@ -543,6 +543,7 @@ h3.head.text-center {
 }
 a.product_name {
     margin: 15px 0;
+    font-size: 25px;
 }
 .product-left:hover .p-one{
 	border: 1px solid #8c2830;
@@ -604,9 +605,9 @@ a.product_name {
 	color: #999;
 }
 .product p i {
-	background: url(../images/cart.png) no-repeat;
-	width: 20px;
-	height: 14px;
+	background: url(../images/abasketicon.png) no-repeat;
+	width: 50px;
+	height: 35px;
 	display: inline-block;
 	margin-right: 4px;
 	vertical-align: middle;
@@ -2256,7 +2257,7 @@ p.right {
 	.navbar-default .navbar-nav > li > a {
 		margin: 0 5px;
 		padding-top: 8px;
-		padding-bottom: 8px;
+		padding-bottom: 15px;
 	}
 	.navbar-nav {
 		margin-right: 60px;
@@ -2384,6 +2385,7 @@ p.right {
 	}
 	a.product_name {
 		margin: 10px 0;
+        font-size: 20px;
 	}
 	.mask a {
 		font-size: 14px;
@@ -2614,7 +2616,7 @@ p.right {
 		padding: 0 5px;
 	}
 	.products-grid a {
-		font-size: 13px;
+		font-size: 25px;
 		letter-spacing: 1px;
 	}
 	.nbs-flexisel-item img {
@@ -3144,4 +3146,8 @@ p.right {
 .itemphotoimg {
     width: 290px;
     height: 240px;
+}
+
+.item_price {
+    font-size: 25px;
 }
