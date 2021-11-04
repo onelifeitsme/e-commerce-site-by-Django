@@ -4,5 +4,5 @@ from django.urls import path, include
 from shop_main_app.views import index
 
 urlpatterns = [
-    path('', index, name='index')
+    path('', index, name='index'),
 ]

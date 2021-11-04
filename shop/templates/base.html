@@ -51,7 +51,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			{% for cat in categories %}
 	        <ul class="nav navbar-nav">
-			<li class="menutop"><a href="index.html">{{ cat.name}}</a></li>
+			<li class="menutop"><a href="{{ cat.get_absolute_url }}">{{ cat.name}}</a></li>
 	        </ul>
 			{% endfor %}
 	    </div>
@@ -108,21 +108,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				   </div>
 				   </div>
 		{% endblock %}
-		<!-- content-section-ends-here -->
-		<div class="news-letter">
-			<div class="container">
-				<div class="join">
-					<h6>УЗНАВАЙТЕ ОБ АКЦИЯХ<br> ПЕРВЫМИ</h6>
-					<div class="sub-left-right">
-						<form>
-							<input type="text" value="Оставьте ваше номер телефона" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter Your Email Here';}" />
-							<input type="submit" value="Оставить номер" />
-						</form>
-					</div>
-					<div class="clearfix"> </div>
-				</div>
-			</div>
-		</div>
+
 						<div class="online-strip">
 					<div class="col-md-4 follow-us">
 						<h3>Мы в соцсетях : <a class="twitter" href="#"></a><a class="facebook" href="#"></a></h3>

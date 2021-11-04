@@ -9,5 +9,3 @@ def index(requst):
     promotionals = Product.objects.filter(promotional=True)
     return render(requst, 'shop_main_app/index.html', {'categories': categories, 'products': products, 'promotionals': promotionals})
 
-
-
