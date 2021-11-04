@@ -9,7 +9,7 @@
 
     <div class="itemshadow">
             <div class="h1border">
-    <a href="#" class="button10" id="categorybutton">ВСЕ {{ item.category.name }}</a>
+    <a href="#" class="button10" id="categorybutton">Вернуться в раздел {{ item.category.name }}</a>
   </div>
     <div class="itemwshow">
     <div class="itemimg">
@@ -35,17 +35,8 @@
     </svg></a>
 </div>
         </div>
-        <h2 class="itemdescription">Описание товара dfgdfg dfg dfgdfg d dfg dfg  ddfgdfg d dfgdf gd dfgdfg dfg dfg df  sdfdsfdsfds  sdfdsf s sdf sd fdsf </h2>
-        <div class="razmer">
-            <div class="razmerblock">
-            <h3 class="razmerword">Размер</h3>
-            <div class="choice">
-                <label><input type="radio" name="r"> <span>S</span></label>
-                <label><input type="radio" name="r" checked><span>M</span></label>
-                <label><input type="radio" name="r"><span>L</span></label>
-                    </div>
-            </div>
-        </div>
+        <h2 class="itemdescription">{{ item.description }}</h2>
+
         <div class="itemchangingblock">
         <ul class="itemparams">
             <li class="itemparam 1">
@@ -65,9 +56,24 @@
             <a href="{% url 'cart' %}" class="button10">В КОРЗИНУ</a>
 
         </div>
+        <div>
+            <form id="orderformid">
+                <input type="number" class="form-control" id="count">
+                <button type="submit" class="button btn buy" id="submit_btn"
+                    data-itemnameeee = "{{ item.name }}"
+                    data-itempriceee = "{{ item.price }}"
+                >Тестовая кнопка
+            </button>
+                </form>
+
+
+
+        </div>
     </div>
     </div>
 </div>
 </div>
 </div>
+{% endblock %}
+{% block promotion %}
 {% endblock %}

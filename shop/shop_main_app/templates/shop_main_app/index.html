@@ -2,12 +2,13 @@
 {% block maincontent %}
 <div class="container">
 	<div class="main-content">
-		<div class="products-grid">
 		<header>
 			<h3 class="head text-center">Самые популярные</h3>
 		</header>
+		<div class="products-grid">
+
 			{% for product in products %}
-			<div class="col-md-4 product simpleCart_shelfItem text-center">
+			<div class="col-md-4 product simpleCart_shelfItem text-center" id="productitemmain">
 				<a href=""><img class="itemphotoimg" src="{{ product.image.url }}" alt="" /></a>
 				<div class="mask">
 					<a href="{{ product.get_absolute_url }}">Quick View</a>

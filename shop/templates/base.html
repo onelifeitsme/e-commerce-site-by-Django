@@ -5,48 +5,29 @@
 <title>Тайтл</title>
 <link type='text/css' href="{% static 'shop_main_app/css/bootstrap.css' %}" rel='stylesheet'/>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="{% static 'shop_main_app/js/jquery.cart.js' %}"></script>
 <script src="{% static 'shop_main_app/js/jquery.min.js' %}"></script>
 <!-- Custom Theme files -->
 <link type="text/css" href="{% static 'shop_main_app/css/style.css' %}" rel="stylesheet" media="all" />
-<!-- Custom Theme files -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Eshop Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!--webfont-->
-<!-- for bootstrap working -->
-	<script type="text/javascript" src="{% static 'shop_main_app/js/bootstrap-3.1.1.min.js' %}"></script>
-<!-- //for bootstrap working -->
-<!-- cart -->
-	<script src="{% static 'shop_main_app/js/simpleCart.min.js' %}"> </script>
-<!-- cart -->
-<link type=text/css href="{% static 'shop_main_app/css/flexslider.css' %}" rel="stylesheet" media="screen" />
 </head>
 <body>
-	<!-- header-section-starts -->
-
 	<div class="header">
 		<div class="header-top-strip">
 			<div class="headerlogobloc"><a href="{% url 'index' %}"><img src="{% static 'shop_main_app/images/pizza-burgelogo1.jpg' %}"></a></div>
 			<div class="hedertitile"><h1 class="headertitleh1">ТВОЙ ЛЮБИМЫЙ ФАСТ-ФУД</h1></div>
-
                 <div class="basketshadow">
 				<a class="cart" href="{% url 'cart' %}">
                     <i class="icn icn-cart"></i>
-					<span class="count cart-count">0</span>
+					<span class="count cart-count" id="countbyn">0</span>
 					<span class="text visible-lg-inline visible-md-inline"><h1 class="korzina">Корзина</h1></span>
                 </a>
 				</div>
 
 			</div>
 		</div>
-
-	<!-- header-section-ends -->
 	<div class="banner-top">
 		<div class="container">
 				<nav class="navbar navbar-default" role="navigation">
-	    <!--/.navbar-header-->
 
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			{% for cat in categories %}
@@ -69,7 +50,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<h3 class="like text-center">Со скидкой на этой неделе:</h3>
 				    <ul id="flexiselDemo3">
 						{% for promo in promotionals %}
-						<li><a href="single.html"><img src="{{ promo.image.url }}" class="img-responsive" alt="" /></a>
+						<li><a href="single.html"><img class="itemphotoimg" src="{{ promo.image.url }}" class="img-responsive" alt="" /></a>
 							<div class="product liked-product simpleCart_shelfItem">
 							<a class="like_name" href="single.html">{{ promo.name }}</a>
 							<p><a class="item_add" href="#"><i></i> <span class=" item_price">{{ promo.price }}</span></a></p>
@@ -123,5 +104,29 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		  </div>
 		</div>
 		</div>
+
+			<script>
+				$(document).ready(function () {
+						var form = $('#orderformid')
+						form.on('submit', function (e) {
+						e.preventDefault();
+						// var count = $('#count').val();
+						// console.log(count);
+						var submit_btn = $('#submit_btn');
+						var productname = submit_btn.data('itemnameeee')
+						var productprice = submit_btn.data('itempriceee')
+						console.log(productname)
+						console.log(productprice)
+						var countbyn = $('#countbyn')
+
+						var numEl = parseInt(countbyn)
+						console.log(numEl)
+
+
+
+
+					})
+				});
+			</script>
 </body>
 </html>
