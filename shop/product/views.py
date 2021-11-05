@@ -4,18 +4,24 @@ from .models import *
 from django.views.generic import DetailView
 
 
-# Create your views here.
-def product(request, product_slug):
-    product = get_object_or_404(Product, slug=product_slug)
-    # cats = Category.objects.all()
-    promotionals = Product.objects.filter(promotional=True)
-    return render(request, 'product/single.html', {'promotionals': promotionals, 'product': product})
-
+# # Create your views here.
+# def product(request, slug):
+#     item = get_object_or_404(Product, slug=slug)
+#     if (item.id + 1).cat == item.cat:
+#         next_item_id = item.id +1
+#
+#     return render(request, 'product/single.html', {'item': item, 'next_item_id': next_item_id})
 
 class Productview(DetailView):
     model = Product
     template_name = 'product/single.html'
     context_object_name = 'item'
+    extra_context = {'categories': Category.objects.all()}
+
+
+
+
+
 
 def category(request, catslug):
     cat = get_object_or_404(Category, slug=catslug)

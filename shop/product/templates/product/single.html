@@ -9,7 +9,7 @@
 
     <div class="itemshadow">
             <div class="h1border">
-    <a href="#" class="button10" id="categorybutton">Вернуться в раздел {{ item.category.name }}</a>
+                <a href="#" class="button10" id="categorybutton">В раздел {{ item.category.name }}</a>
   </div>
     <div class="itemwshow">
     <div class="itemimg">
@@ -47,7 +47,7 @@
             </li>
         </ul>
         <div class="itemparamscoun">
-            <div class="itemparamscount weight">400</div>
+            <div class="itemparamscount weight">400 {{ next_item_slug }}</div>
             <div class="itemparamscount cost">{{ item.price }} BYN</div>
         </div>
 
