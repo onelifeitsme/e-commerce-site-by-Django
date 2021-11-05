@@ -16,10 +16,15 @@
 			<div class="headerlogobloc"><a href="{% url 'index' %}"><img src="{% static 'shop_main_app/images/pizza-burgelogo1.jpg' %}"></a></div>
 			<div class="hedertitile"><h1 class="headertitleh1">ТВОЙ ЛЮБИМЫЙ ФАСТ-ФУД</h1></div>
                 <div class="basketshadow">
-				<a class="cart" href="{% url 'cart' %}">
+				<a class="cart" href="{% url 'cart:cart_detail' %}">
                     <i class="icn icn-cart"></i>
-					<span class="count cart-count" id="countbyn">0</span>
-					<span class="text visible-lg-inline visible-md-inline"><h1 class="korzina">Корзина</h1></span>
+					{% with total_items=cart|length %}
+					<span class="count cart-count" id="countbyn">
+						{{ cart.get_total_price }} BYN
+						<a href="{% url 'cart:cart_detail' %}"></a>
+						{% endwith %}
+					</span>
+
                 </a>
 				</div>
 

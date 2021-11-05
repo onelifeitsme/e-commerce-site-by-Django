@@ -3097,8 +3097,14 @@ p.right {
 }
 .basketshadow {
     display: flex;
+    align-items: center;
+    border-style: dotted;
+    border-radius: 40%;
 
+}
 
+.cart {
+    margin: 20px;
 }
 .basketimgpluscount {
     display: flex;

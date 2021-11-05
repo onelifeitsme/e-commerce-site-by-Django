@@ -1,44 +1,55 @@
 {% extends 'base.html' %}
 {% block maincontent %}
 {% load static %}
-<link type="text/css" href="{% static 'basket/css/basket.css' %}" rel="stylesheet">
-<div class="itemsinbasketh1">
-    <h1>ТОВАРЫ В КОРЗИНЕ</h1>
-</div>
+<link type="text/css" href="{% static 'cart/css/cart.css' %}" rel="stylesheet">
+
+
 <div class="ordercontent">
-<div class="basketshadowww">
-<div class="baskerblockkk">
-{% for five in fivetestproduct %}
+    <div class="orderconentborder">
+        <div class="itemsinbasketh1">
+    <h1 class="headtext-center">ТОВАРЫ В КОРЗИНЕ</h1>
+</div>
+        {% for item in cart %}
+        {% with product=item.product %}
     <div class="iteminbasket">
-        <div class="iteminbasketname">
-            <h2 class="itembasketnameh2">{{ five.name }}</h2>
+        <div class="iteminbasketblock name">
+            <h2 class="itembasketnameh2">{{ product.name }}</h2>
         </div>
-        <div class="iteminbasketimage">
-            <img class="imgimgimg" src="{{ five.image.url }}" alt="">
+        <div class="iteminbasketblock image">
+            <img class="imgimgimg" src="{{ product.image.url }}" alt="">
         </div>
-        <div class="iteminbasketprice">
-            <h2 class="itembasketpriceh2">{{ five.price }} BYN</h2>
+        <div class="iteminbasketblock price">
+            <h2 class="itembasketpriceh2">{{ item.price }} BYN</h2>
         </div>
-        <div class="countchage">
-            <input type="button" value="+" onClick="change('amount',0,10, 1);"/>
-            <input id="amount" type="text" value="1"/>
-            <input type="button" value="-" onClick="change('amount',0,10,-1);"/>
-            <script>
-function change(objName, min, max, step) {
-var obj = document.getElementsById(objName);
-var tmp = +obj.value + step;
-if (tmp<min) tmp=min;
-if (tmp>max) tmp=max;
-obj.value = tmp;
-}
-</script>
+        <div class="iteminbasketblock quantity">
+            <form class="formquantitychange" action="{% url 'cart:cart_add' product.id %}" method="post">
+                {{ item.update_quantity_form.quantity }}
+                {{ item.update_quantity_form.update }}
+                <h5>шт.</h5>
+                <input type="submit" value="Обновить">
+                {% csrf_token %}
+              </form>
+        </div>
+        <div class="iteminbasketblock remove">
+            <a href="{% url 'cart:cart_remove' product.id %}"><h3>удалить</h3></a>
+        </div>
+        <div class="iteminbasketblock totalprice">
+            <h2 class="num">{{ item.total_price }} BYN</h2>
         </div>
 
     </div>
-{% endfor %}
-    <div class="orderbutonnn">
-        <a href="{% url 'order' %}" class="button10">Оформить заказ</a>
-    </div>
+{% endwith %}
+      {% endfor %}
+        <div class="cartbottom">
+        <div class="totalprice">
+            <h1>Всего {{ cart.get_total_price }} BYN</h1>
+        </div>
+        <div class="orderbotton">
+            <a href="{% url 'order' %}" class="button10">Оформить заказ</a>
+        </div>
+            </div>
+
+</div>
 </div>
 </div>
 </div>

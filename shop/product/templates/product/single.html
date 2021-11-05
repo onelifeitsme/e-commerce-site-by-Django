@@ -4,16 +4,17 @@
 <link type='text/css' href="{% static 'product/css/product.css' %}" rel='stylesheet'/>
 <div class="contentus">
 
+
 <div class="itemshadowbig">
 
 
     <div class="itemshadow">
             <div class="h1border">
-                <a href="#" class="button10" id="categorybutton">В раздел {{ item.category.name }}</a>
+                <a href="#" class="button10" id="categorybutton">В раздел {{ product.category.name }}</a>
   </div>
     <div class="itemwshow">
     <div class="itemimg">
-        <img class="im" src="{{ item.image.url }}" alt="">
+        <img class="im" src="{{ product.image.url }}" alt="">
     </div>
     <div class="itemdesc">
         <div class="itemtunring">
@@ -25,7 +26,7 @@
             <path d="M-1.48029737e-15,0.56157424 L-1.48029737e-15,16.1929159 L9.708,8.33860465 L-2.66453526e-15,0.56157424 L-1.48029737e-15,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"></path>
         </g></svg></a>
     </svg>
-            <div class="itemname"><h1>{{ item.name }}</h1></div>
+            <div class="itemname"><h1>{{ product.name }}</h1></div>
     <a href="#"><svg width="18px" height="17px" viewBox="-1 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <g>
             <polygon class="arrow-6-pl" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
@@ -35,7 +36,7 @@
     </svg></a>
 </div>
         </div>
-        <h2 class="itemdescription">{{ item.description }}</h2>
+        <h2 class="itemdescription">{{ product.description }}</h2>
 
         <div class="itemchangingblock">
         <ul class="itemparams">
@@ -47,28 +48,23 @@
             </li>
         </ul>
         <div class="itemparamscoun">
-            <div class="itemparamscount weight">400 {{ next_item_slug }}</div>
-            <div class="itemparamscount cost">{{ item.price }} BYN</div>
+            <div class="itemparamscount weight">400 {{ next_product_slug }}</div>
+            <div class="itemparamscount cost">{{ product.price }} BYN</div>
         </div>
+
 
         </div>
         <div class="itemorderblock">
-            <a href="{% url 'cart' %}" class="button10">В КОРЗИНУ</a>
+            <form class='formaddtocart' action="{% url 'cart:cart_add' product.id%}" method="post">
+                {{ cart_product_form }}
 
-        </div>
-        <div>
-            <form id="orderformid">
-                <input type="number" class="form-control" id="count">
-                <button type="submit" class="button btn buy" id="submit_btn"
-                    data-itemnameeee = "{{ item.name }}"
-                    data-itempriceee = "{{ item.price }}"
-                >Тестовая кнопка
-            </button>
-                </form>
-
+                {% csrf_token %}
+                <input type="submit" class="button10" value="В корзину">
+            </form>
 
 
         </div>
+
     </div>
     </div>
 </div>

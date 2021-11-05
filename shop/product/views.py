@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse, HttpResponseNotFound, Http404
 from .models import *
 from django.views.generic import DetailView
+from cart.forms import CartAddProductForm
 
 
 # # Create your views here.
@@ -15,8 +16,9 @@ from django.views.generic import DetailView
 class Productview(DetailView):
     model = Product
     template_name = 'product/single.html'
-    context_object_name = 'item'
-    extra_context = {'categories': Category.objects.all()}
+    context_object_name = 'product'
+    cart_product_form = CartAddProductForm
+    extra_context = {'categories': Category.objects.all(), 'cart_product_form': cart_product_form}
 
 
 
