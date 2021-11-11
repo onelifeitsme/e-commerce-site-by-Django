@@ -17,13 +17,15 @@ from django.contrib import admin
 from django.urls import path, include
 
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('cart/', include('cart.urls', namespace='cart')),
+    path('', include('order.urls')),
     path('', include('shop_main_app.urls')),
     path('', include('product.urls')),
-    path('', include('cart.urls')),
-    path('', include('order.urls')),
+
+
 ]
 
 from shop import settings

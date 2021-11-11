@@ -1,10 +1,9 @@
-from django.contrib.auth import admin
 from django.urls import path, include
+from . import views
 
-from .views import order
 
 urlpatterns = [
-    path('order', order, name='order')
+    path('order', views.order, name='order'),
 ]
 
 

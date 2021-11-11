@@ -5,17 +5,17 @@
     <div class="top">
         <h1>Подтвердите ваш заказ на сумму {{ cart.get_total_price }} BYN</h1>
         <div class="orderbotton">
-            <a href="{% url 'cart:cart_detail' %}" class="button10">Перепроверить заказ</a>
+            <a href="{% url 'cart:cart_detail' %}" class="button10">ВЕРНУТЬСЯ ПРОВЕРИТЬ ЗАКАЗ</a>
         </div>
     </div>
 <div class="contentik">
 
 <div class="formblock">
-<form class="orderform" action="{% url 'order' %}" method="post">
-    {% csrf_token %}
-    {{ forma.as_p }}
-    <button type="submit">Подтвердить заказ</button>
-</form>
+<form action="{% url 'order' %}" method="post" class="order-form">
+        {{ form.as_p }}
+        <p><input type="submit" value="Подтвердить"></p>
+        {% csrf_token %}
+    </form>
 </div>
 </div>
 

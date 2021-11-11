@@ -13,7 +13,7 @@ from django.views.decorators.http import require_POST
 from product.models import Product, Category
 from .cart import Cart
 from .forms import CartAddProductForm
-from django.contrib import messages
+
 
 
 @require_POST
@@ -34,7 +34,6 @@ def cart_remove(request, product_id):
     cart = Cart(request)
     product = get_object_or_404(Product, id=product_id)
     cart.remove(product)
-    messages.add_message(request, messages.INFO, 'EEE')
     return redirect('cart:cart_detail')
 
 
