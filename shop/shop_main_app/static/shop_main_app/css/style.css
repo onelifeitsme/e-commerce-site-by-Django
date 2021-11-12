@@ -18,6 +18,18 @@ body a{
 	-ms-transition:0.5s all;
 }
 
+.categoriesblock {
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+}
+
+.categoryname {
+    margin: 32px;
+    color: black;
+    font-weight: bold;
+
+}
 
 input[type="button"],input[type="submit"]{
 	transition:0.5s all;
@@ -2203,7 +2215,7 @@ p.right {
 		margin: 100px 0px 0px 30px;
 	}
 	.navbar-nav {
-		margin-right: 30px;
+
 	}
 	.dropdown-menu.columns-3 {
 		min-width: 520px;
@@ -2256,7 +2268,7 @@ p.right {
 		padding-bottom: 15px;
 	}
 	.navbar-nav {
-		margin-right: 60px;
+
 		margin-top: 6px;
 	}
 	.dropdown-menu.columns-3 {

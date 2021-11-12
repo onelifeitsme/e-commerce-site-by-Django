@@ -5,7 +5,8 @@
 }
 .itemshadow {
     border-style: solid;
-    min-width: 1000px;
+    min-width: 75%;
+    padding-right: 150px;
 }
 
 .h1border {
@@ -36,6 +37,10 @@
 }
 
 
+.itemdescription {
+    max-width: 800px;
+}
+
 .itemdesc {
     padding-left: 5%;
     min-width: 40%;
@@ -62,7 +67,7 @@
 }
 
 .itemshadowbig {
-    max-width: 60%;
+
     display: flex;
 }
 

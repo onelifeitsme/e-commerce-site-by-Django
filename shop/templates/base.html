@@ -30,22 +30,12 @@
 
 			</div>
 		</div>
-	<div class="banner-top">
-		<div class="container">
-				<nav class="navbar navbar-default" role="navigation">
-
-	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	<div class="categoriesblock">
 			{% for cat in categories %}
-	        <ul class="nav navbar-nav">
-			<li class="menutop"><a href="{{ cat.get_absolute_url }}">{{ cat.name}}</a></li>
-	        </ul>
+		<a href="{{ cat.get_absolute_url }}"><h1 class="categoryname">{{ cat.name}}</h1></a>
 			{% endfor %}
-	    </div>
-	    <!--/.navbar-collapse-->
-	</nav>
-	<!--/.navbar-->
 		</div>
-		</div>
+
         {% block maincontent %}
         Главный контент страницы
         {% endblock %}

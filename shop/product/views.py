@@ -29,4 +29,6 @@ def category(request, catslug):
     cat = get_object_or_404(Category, slug=catslug)
     catid = cat.id
     products = Product.objects.filter(category_id=catid)
-    return render(request, 'shop_main_app/category.html', {'products': products, 'cat':cat})
+    categories = Category.objects.all()
+    return render(request, 'shop_main_app/category.html', {'products': products, 'cat':cat, 'categories': categories})
+
