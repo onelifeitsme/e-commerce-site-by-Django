@@ -28,6 +28,7 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='Цена товара')
     category = models.ForeignKey(Category, on_delete=models.PROTECT, null=True, verbose_name='Категория товара')
     promotional = models.BooleanField(default=False, verbose_name='На акции')
+    popular = models.BooleanField(default=False, verbose_name='Популярный товар')
 
 
     def __str__(self):
