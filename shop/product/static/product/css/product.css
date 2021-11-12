@@ -5,6 +5,7 @@
 }
 .itemshadow {
     border-style: solid;
+    min-width: 1000px;
 }
 
 .h1border {
@@ -44,6 +45,8 @@
 
 .itemname {
     text-align: center;
+    border: solid;
+    padding: 5px;
 }
 
 .itemparams {

@@ -24,7 +24,7 @@ class Product(models.Model):
     slug = models.SlugField(max_length=255, unique=True, db_index=True, verbose_name="URL")
     description = models.TextField(default='Описание', verbose_name='Описание товара')
     image = models.ImageField(upload_to='images/%Y/%m/%d/', blank=True)
-    sizes = models.IntegerField(default=1, verbose_name='Размеры')
+    sizes = models.DecimalField(max_digits=10, decimal_places=2, default=1, verbose_name='Размеры')
     price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='Цена товара')
     category = models.ForeignKey(Category, on_delete=models.PROTECT, null=True, verbose_name='Категория товара')
     promotional = models.BooleanField(default=False, verbose_name='На акции')
