@@ -1,6 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from django.http import HttpResponse, HttpResponseNotFound, Http404
-from .models import *
+from .models import Product, Category
 from django.views.generic import DetailView
 from cart.forms import CartAddProductForm
 
@@ -21,14 +20,9 @@ class Productview(DetailView):
     extra_context = {'categories': Category.objects.all(), 'cart_product_form': cart_product_form}
 
 
-
-
-
-
 def category(request, catslug):
     cat = get_object_or_404(Category, slug=catslug)
     catid = cat.id
     products = Product.objects.filter(category_id=catid)
     categories = Category.objects.all()
-    return render(request, 'shop_main_app/category.html', {'products': products, 'cat':cat, 'categories': categories})
-
+    return render(request, 'shop_main_app/category.html', {'products': products, 'cat': cat, 'categories': categories})

@@ -1,8 +1,6 @@
 from decimal import Decimal
 from django.conf import settings
-from django.http import request
 from product.models import Product
-
 
 
 class Cart(object):
@@ -67,7 +65,6 @@ class Cart(object):
         if product_id in self.cart:
             del self.cart[product_id]
             self.save()
-
 
     def get_total_price(self):
         # получаем общую стоимость

@@ -4,7 +4,7 @@ from .forms import OrderCreateForm
 from product.models import Category
 from cart.cart import Cart
 
-# Create your views here.
+
 def order(request):
     cart = Cart(request)
     if request.method == 'POST':
@@ -23,4 +23,3 @@ def order(request):
     else:
         form = OrderCreateForm
     return render(request, 'order/order.html', {'cart': cart, 'form': form, 'categories': Category.objects.all()})
-

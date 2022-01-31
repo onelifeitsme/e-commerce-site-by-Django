@@ -1,6 +1,4 @@
-from django.contrib.auth import admin
-from django.urls import path, include
-
+from django.urls import path
 from shop_main_app.views import index
 
 urlpatterns = [

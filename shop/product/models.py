@@ -2,7 +2,6 @@ from django.db import models
 from django.urls import reverse
 
 
-
 class Category(models.Model):
     name = models.CharField(max_length=255, verbose_name='Имя категории')
     slug = models.SlugField(max_length=255, unique=True, db_index=True, verbose_name="URL")
@@ -29,7 +28,6 @@ class Product(models.Model):
     category = models.ForeignKey(Category, on_delete=models.PROTECT, null=True, verbose_name='Категория товара')
     promotional = models.BooleanField(default=False, verbose_name='На акции')
     popular = models.BooleanField(default=False, verbose_name='Популярный товар')
-
 
     def __str__(self):
         return self.name
