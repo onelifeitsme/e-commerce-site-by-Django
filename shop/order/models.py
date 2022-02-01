@@ -3,6 +3,7 @@ from product.models import Product
 
 
 class Order(models.Model):
+    """модель заказа"""
     customer_name = models.CharField(max_length=255, verbose_name='Ваше имя')
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
@@ -25,6 +26,7 @@ class Order(models.Model):
 
 
 class OrderItem(models.Model):
+    """модель товара в заказе"""
     order = models.ForeignKey(Order, related_name='items', on_delete=models.CASCADE)
     product = models.ForeignKey(Product, related_name='order_items', on_delete=models.CASCADE)
     price = models.DecimalField(max_digits=10, decimal_places=2)

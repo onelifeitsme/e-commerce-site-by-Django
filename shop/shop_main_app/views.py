@@ -1,9 +1,9 @@
 from django.shortcuts import render
-
 from product.models import Product, Category
 
 
 def index(requst):
+    """представление главной страницы"""
     categories = Category.objects.all()
     products = Product.objects.filter(popular=True)
     promotionals = Product.objects.filter(promotional=True)

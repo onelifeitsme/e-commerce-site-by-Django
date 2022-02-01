@@ -3,6 +3,7 @@ from django.urls import reverse
 
 
 class Category(models.Model):
+    """модель категории"""
     name = models.CharField(max_length=255, verbose_name='Имя категории')
     slug = models.SlugField(max_length=255, unique=True, db_index=True, verbose_name="URL")
 
@@ -17,8 +18,8 @@ class Category(models.Model):
         verbose_name_plural = 'Категории'
 
 
-# Create your models here.
 class Product(models.Model):
+    """модель товара"""
     name = models.CharField(max_length=255, verbose_name='Имя товара')
     slug = models.SlugField(max_length=255, unique=True, db_index=True, verbose_name="URL")
     description = models.TextField(default='Описание', verbose_name='Описание товара')

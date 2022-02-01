@@ -4,15 +4,8 @@ from django.views.generic import DetailView
 from cart.forms import CartAddProductForm
 
 
-# # Create your views here.
-# def product(request, slug):
-#     item = get_object_or_404(Product, slug=slug)
-#     if (item.id + 1).cat == item.cat:
-#         next_item_id = item.id +1
-#
-#     return render(request, 'product/single.html', {'item': item, 'next_item_id': next_item_id})
-
 class Productview(DetailView):
+    """представление страницы одного товара"""
     model = Product
     template_name = 'product/single.html'
     context_object_name = 'product'
@@ -21,6 +14,7 @@ class Productview(DetailView):
 
 
 def category(request, catslug):
+    """представление страницы категории"""
     cat = get_object_or_404(Category, slug=catslug)
     catid = cat.id
     products = Product.objects.filter(category_id=catid)

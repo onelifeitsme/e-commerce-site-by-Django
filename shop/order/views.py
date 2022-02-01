@@ -6,6 +6,7 @@ from cart.cart import Cart
 
 
 def order(request):
+    """представление страницы заказа"""
     cart = Cart(request)
     if request.method == 'POST':
         form = OrderCreateForm(request.POST)
